@@ -1,28 +1,34 @@
 (function () {
   'use strict';
+  // [id, obiekt, zakres, liczba zdjęć, duże wersje 1600]
   var R = [
-    ['r01', 'Willa Roberta Nestlera', 'Renowacja elewacji, detalu sztukatorskiego i stolarki'],
-    ['r02', 'Pałac Sobańskich w Guzowie', 'Odtworzenie zwieńczenia wieży, pokrycia dachu i lukarn'],
-    ['r03', 'Kraków, ul. św. Jana 24', 'Renowacja bramy wejściowej, elewacji, stolarki i polichromii'],
-    ['r04', 'Politechnika Gdańska', 'Renowacja okien i drzwi'],
-    ['r05', 'Łódź, ul. Piotrkowska 153', 'Balkon z piaskowca, cegła i elementy metalowe, laserunek elewacji'],
-    ['r06', 'Pałac Arnolda Stillera', 'Renowacja elewacji i attyki'],
-    ['r07', 'ul. Narutowicza 4', 'Renowacja elewacji'],
-    ['r08', 'Łódź, ul. Piotrkowska 147', 'Pokrycie dachu, elewacja, sztukateria'],
-    ['r09', 'ul. Wysoka 8', 'Renowacja elewacji'],
-    ['r10', 'ul. Jaracza 1', 'Renowacja elewacji'],
-    ['r11', 'Warszawa, ul. Willowa 8/10', 'Renowacja elewacji'],
-    ['r12', 'ul. Piramowicza 6', 'Elewacja, stolarka okienna, balustrada balkonowa'],
-    ['r13', 'Łódź, ul. Piotrkowska 143', 'Renowacja stolarki okiennej']
+    ['r01', 'Willa Roberta Nestlera', 'Renowacja elewacji, detalu sztukatorskiego i stolarki', 3, 1],
+    ['r02', 'Pałac Sobańskich w Guzowie', 'Elewacja, odtworzenie zwieńczenia wieży, pokrycia dachu i lukarn, detal', 4, 1],
+    ['r03', 'Kraków, ul. św. Jana 24', 'Renowacja bramy wejściowej, elewacji, stolarki i polichromii', 4, 1],
+    ['r04', 'Politechnika Gdańska', 'Renowacja okien i drzwi', 2, 1],
+    ['r00', 'Elewacja kamienicy ze sztukaterią', 'Renowacja elewacji, detalu i balkonów', 3, 1],
+    ['r05', 'Łódź, ul. Piotrkowska 153', 'Elewacja, balkon z piaskowca, cegła i elementy metalowe, laserunek', 4, 0],
+    ['r06', 'Pałac Arnolda Stillera', 'Renowacja elewacji i attyki', 2, 0],
+    ['r08', 'Łódź, ul. Piotrkowska 147', 'Elewacja, sztukateria, pokrycie dachu', 3, 0],
+    ['r12', 'ul. Piramowicza 6', 'Elewacja, stolarka okienna, balustrada balkonowa', 3, 0],
+    ['r14', 'Warszawa, ul. Słoneczna 50', 'Renowacja elewacji i cegły cementowej', 2, 0],
+    ['r07', 'ul. Narutowicza 4', 'Renowacja elewacji', 1, 0],
+    ['r09', 'ul. Wysoka 8', 'Renowacja elewacji', 1, 0],
+    ['r10', 'ul. Jaracza 1', 'Renowacja elewacji', 1, 0],
+    ['r11', 'Warszawa, ul. Willowa 8/10', 'Renowacja elewacji', 1, 0],
+    ['r13', 'Łódź, ul. Piotrkowska 143', 'Renowacja stolarki okiennej', 1, 0]
   ];
   var pas = document.getElementById('pas');
-  var avail = window.PBK_IMG || R.map(function (r) { return r[0]; });
-  var lista = R.filter(function (r) { return avail.indexOf(r[0]) > -1; });
+  var lista = R;
+  // wszystkie zdjęcia po kolei do powiększenia
+  var foty = [], start = [];
+  R.forEach(function (r, oi) { start.push(foty.length); for (var k = 1; k <= r[3]; k++) foty.push([oi, k]); });
 
   // karty realizacji
   var html = '';
   lista.forEach(function (r, i) {
-    html += '<li><button type="button" class="karta" data-i="' + i + '"><div class="fot"><img data-src="img/' + r[0] + '-600.webp" data-srcset="img/' + r[0] + '-600.webp 600w, img/' + r[0] + '-900.webp 900w" sizes="(max-width:760px) 84vw, (max-width:1279px) 40vw, (max-width:1699px) 30vw, 22vw" width="600" height="450" alt="' + r[1] + ' - ' + r[2].toLowerCase() + '"></div><b>' + r[1] + '</b><span>' + r[2] + '</span></button></li>';
+    var ile = r[3] > 1 ? '<i class="ile">' + r[3] + ' zdjęcia</i>' : '';
+    html += '<li><button type="button" class="karta" data-i="' + i + '"><div class="fot"><img data-src="img/' + r[0] + '-600.webp" data-srcset="img/' + r[0] + '-600.webp 600w, img/' + r[0] + '-900.webp 900w" sizes="(max-width:760px) 84vw, (max-width:1279px) 40vw, (max-width:1699px) 30vw, 22vw" width="600" height="450" alt="' + r[1] + ' - ' + r[2].toLowerCase() + '">' + ile + '</div><b>' + r[1] + '</b><span>' + r[2] + '</span></button></li>';
   });
   pas.innerHTML = html;
 
@@ -77,18 +83,20 @@
   // lightbox
   var lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img'), lbOp = document.getElementById('lb-op'), cur = 0, ost = null;
   function pokaz(i) {
-    cur = (i + lista.length) % lista.length;
-    var r = lista[cur];
-    lbImg.src = 'img/' + r[0] + '-900.webp';
+    cur = (i + foty.length) % foty.length;
+    var f = foty[cur], r = R[f[0]], base = 'img/' + r[0] + '-' + f[1];
+    lbImg.src = base + '-900.webp';
     lbImg.alt = r[1] + ' - ' + r[2].toLowerCase();
-    lbOp.textContent = r[1] + ' - ' + r[2];
-    var big = new Image(); big.onload = function () { if (lista[cur] === r) lbImg.src = big.src; };
-    setTimeout(function () { big.src = 'img/' + r[0] + '-1600.webp'; }, 180);
+    lbOp.textContent = r[1] + ' - ' + r[2] + (r[3] > 1 ? ' (' + f[1] + '/' + r[3] + ')' : '');
+    if (r[4]) {
+      var big = new Image(); big.onload = function () { if (foty[cur] === f) lbImg.src = big.src; };
+      setTimeout(function () { big.src = base + '-1600.webp'; }, 180);
+    }
   }
   pas.addEventListener('click', function (e) {
     if (przes) { e.preventDefault(); przes = false; return; }
     var b = e.target.closest('.karta'); if (!b) return;
-    ost = b; pokaz(+b.dataset.i); lb.classList.add('on'); document.body.style.overflow = 'hidden'; lb.querySelector('.x').focus();
+    ost = b; pokaz(start[+b.dataset.i]); lb.classList.add('on'); document.body.style.overflow = 'hidden'; lb.querySelector('.x').focus();
   });
   function zamknij() { lb.classList.remove('on'); document.body.style.overflow = ''; lbImg.removeAttribute('src'); if (ost) ost.focus(); }
   lb.querySelector('.x').addEventListener('click', zamknij);
