@@ -69,7 +69,7 @@ p{margin:0}
 .hero picture img{object-fit:cover;object-position:50% 0%}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,26,38,.86) 0%,rgba(8,26,38,.62) 38%,rgba(8,26,38,.08) 72%),linear-gradient(0deg,rgba(8,26,38,.55),rgba(8,26,38,0) 45%)}
 .hero .wrap{position:relative;z-index:2;padding-block:clamp(40px,8vh,110px)}
-.portal{position:relative;max-width:min(880px,100%);padding:4px 0 4px clamp(30px,2.8vw,48px)}
+.portal{position:relative;max-width:min(100%,max(880px,50vw));padding:4px 0 4px clamp(30px,2.8vw,48px)}
 .portal::before{content:"";position:absolute;left:0;top:0;bottom:0;width:12px;background:repeating-linear-gradient(90deg,var(--cy) 0 2px,transparent 2px 5px)}
 .hero h1{color:#fff;font-size:clamp(2.05rem,1.1rem + 3.6vw,5rem);font-weight:600;max-width:22ch}
 .hero .lead{margin-top:clamp(14px,1.6vw,24px);font-size:clamp(1.02rem,.9rem + .5vw,1.4rem);line-height:1.5;max-width:44ch;color:#E6EEF2}
@@ -201,7 +201,7 @@ form h3{margin-bottom:18px}
   .nav .tel span{display:none}
   .nav .tel{width:44px;height:44px;justify-content:center;background:var(--cy);clip-path:var(--st)}
   .nav.otw{top:58px}
-  .nav.otw .tel{width:auto;height:auto;border:0;clip-path:none;justify-content:flex-start}
+  .nav.otw .tel{width:auto;height:auto;border:0;clip-path:none;justify-content:flex-start;background:none;gap:12px}
   .nav.otw .tel span{display:inline}
   .hero{min-height:calc(100svh - 58px)}
   .hero picture img{object-position:50% 30%}
