@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>PBK ART DECO - renowacja kamienic i obiektów zabytkowych, Łódź</title>
+<meta name="description" content="Przedsiębiorstwo budowlano-konserwatorskie ART DECO z Łodzi: sztukateria, stolarka, kamieniarstwo, rzeźba i snycerka, metaloplastyka, roboty budowlane. Tel. 607 443 695.">
+<meta name="theme-color" content="#0B2433">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/hero-m-640.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-640.webp 640w, img/hero-m-860.webp 860w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2000.webp 2000w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/jost-rdzen.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/jost-pl.woff2" crossorigin>
+<style>
+@font-face{font-family:Jost;font-weight:100 900;font-display:swap;src:url(fonts/jost-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Jost;font-weight:100 900;font-display:swap;src:url(fonts/jost-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{
+  --cy:#00AEEF;          /* cyan z logo */
+  --cy-t:#0074A6;        /* cyan do tekstu na bieli */
+  --ink:#0B2433;         /* granat-grafit */
+  --ink-2:#123447;
+  --tx:#1B2B36;
+  --mut:#4D5E69;
+  --gr:#F1F4F6;          /* chłodna szarość sekcji */
+  --ln:#D8E0E5;
+  --w:min(92vw,1720px);
+  --pad:clamp(16px,4vw,64px);
+  --st:polygon(8px 0,calc(100% - 8px) 0,calc(100% - 8px) 4px,calc(100% - 4px) 4px,calc(100% - 4px) 8px,100% 8px,100% calc(100% - 8px),calc(100% - 4px) calc(100% - 8px),calc(100% - 4px) calc(100% - 4px),calc(100% - 8px) calc(100% - 4px),calc(100% - 8px) 100%,8px 100%,8px calc(100% - 4px),4px calc(100% - 4px),4px calc(100% - 8px),0 calc(100% - 8px),0 8px,4px 8px,4px 4px,8px 4px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:#fff;color:var(--tx);font:400 clamp(16px,.95rem + .15vw,19px)/1.6 Jost,system-ui,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-weight:600;line-height:1.12;margin:0;color:var(--ink);letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,1.2rem + 2.2vw,3.6rem)}
+h3{font-size:clamp(1.15rem,1rem + .45vw,1.5rem);line-height:1.25}
+p{margin:0}
+.wrap{width:var(--w);margin-inline:auto}
+.txt{max-width:68ch}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;padding:8px 12px;z-index:99}
+.skip:focus{left:8px}
+
+/* przycisk ze schodkowymi narożnikami art deco */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:clamp(52px,3.4vw,62px);padding:.8em 1.7em;background:var(--cy);color:var(--ink);font:600 clamp(1rem,.92rem + .3vw,1.25rem)/1.1 Jost,sans-serif;text-decoration:none;border:0;cursor:pointer;clip-path:var(--st);transition:background .2s,color .2s}
+.btn:hover,.btn:focus-visible{background:#fff;color:var(--ink)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.btn.ink{background:var(--ink);color:#fff}
+.btn.ink:hover,.btn.ink:focus-visible{background:var(--cy);color:var(--ink)}
+
+/* nagłówek */
+.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);box-shadow:0 1px 0 var(--ln)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo img{width:auto;height:46px}
+.nav{display:flex;align-items:center;gap:clamp(18px,2vw,36px)}
+.nav a{text-decoration:none;font-weight:500;font-size:1rem;color:var(--ink);padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--cy)}
+.nav .tel{display:inline-flex;align-items:center;gap:8px;font-weight:600}
+.tel svg{width:18px;height:18px;flex:none}
+.burger{display:none;width:48px;height:48px;border:0;background:none;padding:12px;cursor:pointer;color:var(--ink)}
+.burger span{display:block;height:2px;background:currentColor;margin:5px 0;transition:transform .2s,opacity .2s}
+.htel{display:none}
+
+/* hero */
+.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:calc(100svh - 64px);color:#fff;background:var(--ink);overflow:hidden}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;object-position:50% 0%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,26,38,.86) 0%,rgba(8,26,38,.62) 38%,rgba(8,26,38,.08) 72%),linear-gradient(0deg,rgba(8,26,38,.55),rgba(8,26,38,0) 45%)}
+.hero .wrap{position:relative;z-index:2;padding-block:clamp(40px,8vh,110px)}
+.portal{position:relative;max-width:min(880px,100%);padding:4px 0 4px clamp(30px,2.8vw,48px)}
+.portal::before{content:"";position:absolute;left:0;top:0;bottom:0;width:12px;background:repeating-linear-gradient(90deg,var(--cy) 0 2px,transparent 2px 5px)}
+.hero h1{color:#fff;font-size:clamp(2.05rem,1.1rem + 3.6vw,5rem);font-weight:600;max-width:22ch}
+.hero .lead{margin-top:clamp(14px,1.6vw,24px);font-size:clamp(1.02rem,.9rem + .5vw,1.4rem);line-height:1.5;max-width:44ch;color:#E6EEF2}
+.hero .btn{margin-top:clamp(26px,2.6vw,40px)}
+.hero .podpis{position:absolute;right:var(--pad);bottom:14px;z-index:2;font-size:.8rem;color:rgba(255,255,255,.8)}
+
+/* sekcje */
+.sec{padding-block:clamp(64px,8vw,140px)}
+.sec.gr{background:var(--gr)}
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 48px;margin-bottom:clamp(28px,3.4vw,56px)}
+.head p{color:var(--mut);max-width:60ch;font-size:clamp(1rem,.95rem + .25vw,1.2rem)}
+
+/* zakres prac */
+.uslugi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,1.8vw,32px);list-style:none;margin:0;padding:0}
+.usl{min-width:0}
+.usl .fot{position:relative;aspect-ratio:4/3;overflow:hidden;clip-path:var(--st);background:var(--ln)}
+.usl .fot img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.usl:hover .fot img{transform:scale(1.04)}
+.usl h3{margin-top:18px;display:flex;align-items:center;gap:10px}
+.usl h3::before{content:"";flex:none;width:14px;height:14px;background:var(--cy);clip-path:polygon(0 0,100% 0,100% 62%,50% 100%,0 62%)}
+.usl p{margin-top:8px;color:var(--mut)}
+
+/* realizacje - pas w kontenerze */
+.pas-w{position:relative}
+.pas{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*var(--g))/4);--g:clamp(14px,1.4vw,24px);gap:var(--g);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;padding:0;margin:0;list-style:none;cursor:grab}
+.pas::-webkit-scrollbar{display:none}
+.pas.drag{cursor:grabbing;scroll-snap-type:none}
+.pas li{scroll-snap-align:start;min-width:0}
+.karta{display:block;width:100%;padding:0;border:0;background:none;text-align:left;cursor:zoom-in;color:inherit;font:inherit}
+.karta .fot{aspect-ratio:4/3;overflow:hidden;clip-path:var(--st);background:var(--ln)}
+.karta img{width:100%;height:100%;object-fit:cover;transition:transform .5s;pointer-events:none}
+.karta:hover img{transform:scale(1.04)}
+.karta b{display:block;margin-top:14px;font-weight:600;font-size:clamp(1.05rem,.98rem + .3vw,1.3rem);color:var(--ink);line-height:1.3}
+.karta span{display:block;margin-top:4px;color:var(--mut);font-size:.97em;line-height:1.45}
+.ster{display:flex;gap:10px}
+.ster button{width:52px;height:52px;border:1.5px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;display:grid;place-items:center;clip-path:var(--st);transition:background .2s,color .2s}
+.ster button:hover:not(:disabled){background:var(--ink);color:#fff}
+.ster button:disabled{opacity:.3;cursor:default}
+.ster svg{width:20px;height:20px}
+.licz{margin-top:18px;color:var(--mut);font-size:.95rem}
+
+/* ciemna sekcja - zaplecze */
+.ciem{position:relative;background:var(--ink);color:#DCE6EC;clip-path:polygon(0 48px,calc(50% - 132px) 48px,calc(50% - 132px) 32px,calc(50% - 88px) 32px,calc(50% - 88px) 16px,calc(50% - 44px) 16px,calc(50% - 44px) 0,calc(50% + 44px) 0,calc(50% + 44px) 16px,calc(50% + 88px) 16px,calc(50% + 88px) 32px,calc(50% + 132px) 32px,calc(50% + 132px) 48px,100% 48px,100% 100%,0 100%);margin-top:-48px;padding-top:calc(clamp(64px,8vw,140px) + 48px);overflow:hidden}
+.ciem::before{content:"";position:absolute;left:50%;bottom:-2px;width:min(1600px,160vw);aspect-ratio:2/1;transform:translateX(-50%);background:repeating-conic-gradient(from -90deg at 50% 100%,rgba(0,174,239,.13) 0deg .6deg,transparent .6deg 7.5deg);-webkit-mask:linear-gradient(0deg,#000 10%,transparent 80%);mask:linear-gradient(0deg,#000 10%,transparent 80%);pointer-events:none}
+.ciem .wrap{position:relative}
+.ciem h2{color:#fff}
+.zap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,96px);align-items:start}
+.zap .txt p+p{margin-top:1em}
+.zap .txt p{font-size:clamp(1.02rem,.95rem + .3vw,1.25rem)}
+.upr{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid rgba(255,255,255,.16)}
+.upr li{padding:20px 0 20px 34px;border-bottom:1px solid rgba(255,255,255,.16);position:relative;color:#fff;font-size:clamp(1.02rem,.95rem + .3vw,1.25rem)}
+.upr li::before{content:"";position:absolute;left:0;top:27px;width:16px;height:16px;background:var(--cy);clip-path:polygon(0 0,100% 0,100% 62%,50% 100%,0 62%)}
+
+/* praca */
+.praca{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,96px);align-items:center}
+.praca .fot{aspect-ratio:4/3;overflow:hidden;clip-path:var(--st);background:var(--ln)}
+.praca .fot img{width:100%;height:100%;object-fit:cover}
+.praca p{margin-top:18px;color:var(--mut);font-size:clamp(1rem,.95rem + .25vw,1.2rem)}
+.stan{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:22px 0 0;padding:0}
+.stan li{padding:8px 16px;background:#fff;border:1px solid var(--ln);font-weight:500;color:var(--ink)}
+.praca .btn{margin-top:28px}
+
+/* kontakt */
+.kont{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(32px,5vw,96px)}
+.dane{display:grid;gap:26px;margin-top:28px}
+.dane h3{font-size:1rem;font-weight:500;color:var(--mut);margin-bottom:6px}
+.dane a,.dane p{font-size:clamp(1.1rem,1rem + .4vw,1.45rem);font-weight:500;color:var(--ink);text-decoration:none;line-height:1.45}
+.dane a:hover{color:var(--cy-t)}
+.dane .tels{display:grid;gap:2px}
+.dane small{display:block;font-size:.95rem;color:var(--mut);font-weight:400;margin-top:4px}
+form{background:var(--gr);padding:clamp(22px,3vw,48px);clip-path:var(--st)}
+form h3{margin-bottom:18px}
+.pole{display:grid;gap:6px;margin-bottom:16px}
+.pole label{font-weight:500;font-size:.98rem;color:var(--ink)}
+.pole input,.pole textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid #B9C6CE;background:#fff;color:var(--tx);border-radius:0}
+.pole input:focus,.pole textarea:focus{outline:2px solid var(--cy);outline-offset:0;border-color:var(--cy)}
+.pole textarea{min-height:130px;resize:vertical}
+.dw{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.info{margin-top:14px;font-size:.92rem;color:var(--mut)}
+.ok{margin-top:14px;font-weight:500;color:var(--ink)}
+.mapa{margin-top:clamp(40px,5vw,80px);width:100%;height:clamp(300px,30vw,560px);background:var(--gr);clip-path:var(--st);overflow:hidden}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+
+/* stopka */
+.stopka{background:var(--ink);color:#B9C8D1;padding-block:44px 28px}
+.stopka .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 40px}
+.stopka h3{color:#fff;font-size:1rem;margin-bottom:10px}
+.stopka p,.stopka a:not(.wylinka-badge){font-size:.97rem;line-height:1.6;text-decoration:none}
+.stopka a:hover{color:#fff}
+.dol{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px;border-top:1px solid rgba(255,255,255,.14);padding-top:22px;margin-top:8px}
+.dol .cr{font-size:.875em;line-height:1}
+.zrodla{grid-column:1/-1;font-size:.82rem;color:#8EA2AE}
+
+/* dolny pasek telefonu */
+.mob{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,18,26,.95);display:none;align-items:center;justify-content:center;flex-direction:column;padding:56px 12px 24px}
+.lb.on{display:flex}
+.lb img{max-width:min(1600px,100%);max-height:calc(100svh - 150px);width:auto;height:auto;object-fit:contain}
+.lb p{color:#E6EEF2;margin-top:14px;text-align:center;max-width:70ch}
+.lb button{position:absolute;background:none;border:0;color:#fff;cursor:pointer;width:56px;height:56px;display:grid;place-items:center}
+.lb button svg{width:28px;height:28px}
+.lb .x{top:6px;right:6px}
+.lb .pv{left:6px;top:50%;transform:translateY(-50%)}
+.lb .nx{right:6px;top:50%;transform:translateY(-50%)}
+
+@media (min-width:1920px){
+  .uslugi{grid-template-columns:repeat(6,minmax(0,1fr))}
+}
+@media (max-width:1699px){.pas{grid-auto-columns:calc((100% - 2*var(--g))/3)}}
+@media (max-width:1279px){.pas{grid-auto-columns:calc((100% - 1.35*var(--g))/2.35)}}
+@media (max-width:1100px){
+  .nav a:not(.tel){display:none}
+  .burger{display:block}
+  .nav.otw{position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;display:flex;flex-direction:column;align-items:flex-start;gap:0;padding:12px var(--pad) 32px;overflow:auto}
+  .nav.otw a{display:block;width:100%;font-size:1.3rem;padding:16px 0;border-bottom:1px solid var(--ln)}
+  .nav.otw .tel{margin-top:12px;border:0}
+  .zap,.praca,.kont{grid-template-columns:minmax(0,1fr)}
+  .stopka .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){.uslugi{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  :root{--w:calc(100vw - 32px)}
+  .top .wrap{height:58px}
+  .logo img{height:38px}
+  html{scroll-padding-top:66px}
+  .nav{gap:4px}
+  .nav .tel span{display:none}
+  .nav .tel{width:44px;height:44px;justify-content:center;background:var(--cy);clip-path:var(--st)}
+  .nav.otw{top:58px}
+  .nav.otw .tel{width:auto;height:auto;border:0;clip-path:none;justify-content:flex-start}
+  .nav.otw .tel span{display:inline}
+  .hero{min-height:calc(100svh - 58px)}
+  .hero picture img{object-position:50% 30%}
+  .hero::after{background:linear-gradient(0deg,rgba(8,26,38,.94) 0%,rgba(8,26,38,.78) 42%,rgba(8,26,38,.1) 72%)}
+  .hero .wrap{padding-block:28px 34px}
+  .portal{padding:2px 0 2px 24px}
+  .portal::before{width:10px;background:repeating-linear-gradient(90deg,var(--cy) 0 2px,transparent 2px 4px)}
+  .hero h1{font-size:clamp(1.85rem,7.6vw,2.4rem)}
+  .hero .lead{font-size:1rem}
+  .hero .btn{width:100%}
+  .hero .podpis{display:none}
+  .uslugi{grid-template-columns:minmax(0,1fr);gap:0}
+  .usl{display:grid;grid-template-columns:clamp(88px,26vw,120px) minmax(0,1fr);gap:4px 16px;align-items:start;padding:16px 0;border-bottom:1px solid var(--ln)}
+  .usl:first-child{border-top:1px solid var(--ln)}
+  .usl .fot{grid-row:span 2;aspect-ratio:1/1}
+  .usl h3{margin-top:2px;font-size:1.12rem}
+  .usl h3::before{width:11px;height:11px}
+  .usl p{margin-top:0;font-size:.97rem;line-height:1.5}
+  .pas{grid-auto-columns:84%}
+  .head .ster{display:none}
+  .dw{grid-template-columns:1fr}
+  .stopka .wrap{gap:24px 20px}
+  .mob{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--ln);transform:translateY(110%);transition:transform .25s}
+  .mob.widac{transform:none}
+  .mob a{min-height:48px;font-size:1rem;padding:.6em 1em}
+  body{padding-bottom:0}
+}
+@media (max-height:700px) and (max-width:760px){
+  .hero .wrap{padding-block:22px 22px}
+  .hero h1{font-size:clamp(1.7rem,7vw,2.1rem)}
+  .hero .lead{margin-top:10px;font-size:.96rem;line-height:1.45}
+  .hero .btn{margin-top:24px;min-height:50px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<style>
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="PBK ART DECO - strona główna">
+      <img src="img/logo-220.webp" srcset="img/logo-110.webp 110w, img/logo-220.webp 220w, img/logo-330.webp 330w" sizes="(max-width:760px) 86px, 104px" width="220" height="98" alt="PBK ART DECO">
+    </a>
+    <nav class="nav" id="nav" aria-label="Menu główne">
+      <a href="#zakres">Zakres prac</a>
+      <a href="#realizacje">Realizacje</a>
+      <a href="#firma">Firma</a>
+      <a href="#praca">Praca</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="tel" href="tel:+48607443695" aria-label="Zadzwoń: 607 443 695"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="miter" aria-hidden="true"><path d="M4 3h5l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v5l-2 1C11 21 3 13 3 5z"/></svg><span>607 443 695</span></a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="tresc">
+<section class="hero" aria-label="Wstęp">
+  <picture>
+    <source media="(max-width:760px)" srcset="img/hero-m-480.webp 480w, img/hero-m-640.webp 640w, img/hero-m-860.webp 860w" sizes="100vw" width="860" height="1387">
+    <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2000.webp 2000w" sizes="100vw" width="2000" height="1250" alt="Odnowiona elewacja zabytkowej kamienicy z detalem sztukatorskim" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="wrap">
+    <div class="portal">
+      <h1>Renowacja kamienic i&nbsp;obiektów zabytkowych</h1>
+      <p class="lead">Przedsiębiorstwo budowlano-konserwatorskie ART DECO z Łodzi. Odtwarzamy sztukaterię, stolarkę, kamień i metaloplastykę - z uprawnieniami konserwatorskimi.</p>
+      <a class="btn" href="#kontakt">Zapytaj o wycenę prac</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="zakres" aria-labelledby="h-zakres">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-zakres">Zakres prac</h2>
+      <p>Prowadzimy prace remontowo-budowlane i konserwatorskie w obiektach zabytkowych: od detalu elewacji, przez stolarkę i kamień, po dach i elementy metalowe.</p>
+    </div>
+    <ul class="uslugi">
+      <li class="usl"><div class="fot"><img src="img/u-sztukateria-560.webp" srcset="img/u-sztukateria-360.webp 360w, img/u-sztukateria-560.webp 560w" sizes="(max-width:760px) 120px, (min-width:1920px) 16vw, (min-width:901px) 30vw, 46vw" width="560" height="420" alt="Odtworzony detal sztukatorski na elewacji" loading="lazy" decoding="async"></div><h3>Sztukateria</h3><p>Odtwarzanie i naprawa gzymsów, obramień okien i detalu elewacji.</p></li>
+      <li class="usl"><div class="fot"><img src="img/u-stolarka-560.webp" srcset="img/u-stolarka-360.webp 360w, img/u-stolarka-560.webp 560w" sizes="(max-width:760px) 120px, (min-width:1920px) 16vw, (min-width:901px) 30vw, 46vw" width="560" height="420" alt="Odnowiona drewniana stolarka okienna w kamienicy" loading="lazy" decoding="async"></div><h3>Stolarka</h3><p>Renowacja okien, drzwi i bram wejściowych w obiektach zabytkowych.</p></li>
+      <li class="usl"><div class="fot"><img src="img/u-kamien-560.webp" srcset="img/u-kamien-360.webp 360w, img/u-kamien-560.webp 560w" sizes="(max-width:760px) 120px, (min-width:1920px) 16vw, (min-width:901px) 30vw, 46vw" width="560" height="420" alt="Balkon z piaskowca po renowacji" loading="lazy" decoding="async"></div><h3>Kamieniarstwo</h3><p>Renowacja balkonów, cokołów i detalu z piaskowca, cegła elewacyjna.</p></li>
+      <li class="usl"><div class="fot"><img src="img/u-rzezba-560.webp" srcset="img/u-rzezba-360.webp 360w, img/u-rzezba-560.webp 560w" sizes="(max-width:760px) 120px, (min-width:1920px) 16vw, (min-width:901px) 30vw, 46vw" width="560" height="420" alt="Rzeźbiony detal architektoniczny" loading="lazy" decoding="async"></div><h3>Rzeźba i snycerka</h3><p>Uzupełnianie rzeźbionych elementów w kamieniu i drewnie, polichromie.</p></li>
+      <li class="usl"><div class="fot"><img src="img/u-metal-560.webp" srcset="img/u-metal-360.webp 360w, img/u-metal-560.webp 560w" sizes="(max-width:760px) 120px, (min-width:1920px) 16vw, (min-width:901px) 30vw, 46vw" width="560" height="420" alt="Balustrada balkonowa po renowacji" loading="lazy" decoding="async"></div><h3>Metaloplastyka i kowalstwo</h3><p>Zwieńczenia i ozdoby z blachy, balustrady, kraty, prace kowalsko-ślusarskie.</p></li>
+      <li class="usl"><div class="fot"><img src="img/u-dach-560.webp" srcset="img/u-dach-360.webp 360w, img/u-dach-560.webp 560w" sizes="(max-width:760px) 120px, (min-width:1920px) 16vw, (min-width:901px) 30vw, 46vw" width="560" height="420" alt="Nowe pokrycie dachu kamienicy" loading="lazy" decoding="async"></div><h3>Roboty budowlane i kosztorysy</h3><p>Remonty, pokrycia dachowe, elewacje oraz kosztorysowanie prac.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec gr" id="realizacje" aria-labelledby="h-real">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2 id="h-real">Realizacje</h2>
+      </div>
+      <div class="ster" role="group" aria-label="Przewijanie realizacji">
+        <button type="button" class="prev" aria-label="Poprzednie realizacje"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4l-8 8 8 8"/></svg></button>
+        <button type="button" class="next" aria-label="Następne realizacje"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4l8 8-8 8"/></svg></button>
+      </div>
+    </div>
+    <div class="pas-w">
+      <ul class="pas" id="pas"></ul>
+    </div>
+    <p class="licz" id="licz">Kliknij zdjęcie, aby je powiększyć.</p>
+  </div>
+</section>
+
+<section class="sec ciem" id="firma" aria-labelledby="h-firma">
+  <div class="wrap zap">
+    <div class="txt">
+      <h2 id="h-firma">Zaplecze i uprawnienia</h2>
+      <p style="margin-top:28px">Jesteśmy rodzinną firmą z Łodzi, działamy od 1996 roku. Mamy własne zaplecze techniczne: maszyny i urządzenia potrzebne do wykonywanych prac.</p>
+      <p>Prace w obiektach zabytkowych prowadzi kadra z uprawnieniami, a detal wykonują nasi rzemieślnicy: sztukatorzy, stolarze, kamieniarze i blacharze.</p>
+    </div>
+    <ul class="upr">
+      <li>Uprawnienia budowlane kadry kierowniczej</li>
+      <li>Uprawnienia konserwatorskie w obiektach architektury</li>
+      <li>Uprawnienia w zakresie prac stolarsko-kowalskich</li>
+      <li>Kosztorys prac przed rozpoczęciem realizacji</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="praca" aria-labelledby="h-praca">
+  <div class="wrap praca">
+    <div class="fot"><img src="img/praca-800.webp" srcset="img/praca-560.webp 560w, img/praca-800.webp 800w" sizes="(max-width:1100px) 92vw, 46vw" width="800" height="600" alt="Pracownik firmy ART DECO przy renowacji elewacji" loading="lazy" decoding="async"></div>
+    <div>
+      <h2 id="h-praca">Pracuj u nas</h2>
+      <p>Firma się rozwija i chętnie przyjmie do zespołu nowe osoby. Oferujemy pracę w zgranym zespole z wieloletnim doświadczeniem oraz dobre warunki pracy.</p>
+      <ul class="stan">
+        <li>sztukator</li><li>malarz</li><li>stolarz</li><li>murarz</li><li>tynkarz</li><li>osoby ze zdolnościami manualnymi (do przyuczenia)</li>
+      </ul>
+      <a class="btn ink" href="mailto:pbkartdeco@o2.pl?subject=CV">Wyślij CV</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec gr" id="kontakt" aria-labelledby="h-kont">
+  <div class="wrap">
+    <div class="kont">
+      <div>
+        <h2 id="h-kont">Kontakt</h2>
+        <p style="margin-top:18px;color:var(--mut);max-width:46ch">Opisz obiekt i zakres prac - przygotujemy wycenę. Zdjęcia elewacji lub detalu najlepiej wysłać mailem.</p>
+        <div class="dane">
+          <div><h3>Telefon</h3><div class="tels"><a href="tel:+48607443695">607 443 695</a><a href="tel:+48601298663">601 298 663</a><a href="tel:+48667157050">667 157 050</a></div></div>
+          <div><h3>E-mail</h3><a href="mailto:pbkartdeco@o2.pl">pbkartdeco@o2.pl</a></div>
+          <div><h3>Adres</h3><p>ul. Chałubińskiego 33<br>92-109 Łódź<small>NIP 726-103-94-76 · REGON 471368850</small></p></div>
+        </div>
+      </div>
+      <form id="form" novalidate>
+        <h3>Zapytanie o wycenę</h3>
+        <div class="dw">
+          <div class="pole"><label for="f-im">Imię i nazwisko lub firma</label><input id="f-im" name="imie" autocomplete="name"></div>
+          <div class="pole"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel"></div>
+        </div>
+        <div class="pole"><label for="f-mail">E-mail</label><input id="f-mail" name="email" type="email" autocomplete="email"></div>
+        <div class="pole"><label for="f-op">Obiekt i zakres prac</label><textarea id="f-op" name="opis" placeholder="Np. kamienica w Łodzi, renowacja elewacji frontowej i balkonów"></textarea></div>
+        <button class="btn ink" type="submit">Wyślij zapytanie</button>
+        <p class="info">Formularz pokazowy - w docelowej stronie zapytanie trafi na adres pbkartdeco@o2.pl.</p>
+        <p class="ok" id="ok" hidden>To podgląd, wiadomość nie została wysłana. Na docelowej stronie formularz będzie działał.</p>
+      </form>
+    </div>
+    <div class="mapa" id="mapa" role="region" data-src="https://www.google.com/maps?q=Cha%C5%82ubi%C5%84skiego+33,+92-109+%C5%81%C3%B3d%C5%BA&amp;output=embed" aria-label="Mapa dojazdu: ul. Chałubińskiego 33, Łódź"></div>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap">
+    <div><h3>PBK ART DECO</h3><p>Przedsiębiorstwo budowlano-konserwatorskie<br>ul. Chałubińskiego 33, 92-109 Łódź</p></div>
+    <div><h3>Kontakt</h3><p><a href="tel:+48607443695">607 443 695</a><br><a href="mailto:pbkartdeco@o2.pl">pbkartdeco@o2.pl</a></p></div>
+    <div><h3>Oferta</h3><p><a href="#zakres">Zakres prac</a><br><a href="#realizacje">Realizacje</a></p></div>
+    <div><h3>Firma</h3><p><a href="#firma">Zaplecze</a><br><a href="#praca">Praca</a></p></div>
+    <div class="dol">
+      <span class="cr">© <span id="rok">2026</span> PBK ART DECO</span>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=pbkartdeco.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+
+<div class="mob" id="mob"><a class="btn ink" href="tel:+48607443695">Zadzwoń</a><a class="btn" href="#kontakt">Wycena</a></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększenie zdjęcia">
+  <button class="x" type="button" aria-label="Zamknij"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  <button class="pv" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4l-8 8 8 8"/></svg></button>
+  <img id="lb-img" alt="">
+  <p id="lb-op"></p>
+  <button class="nx" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4l8 8-8 8"/></svg></button>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
